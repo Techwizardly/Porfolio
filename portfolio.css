@@ -17,7 +17,7 @@ body{
     
 }
 .home{
-    width: 85%;
+    width: 95%;
     height: 550px;
     background-color: #FFFBE6;
     margin: auto;
@@ -61,7 +61,7 @@ nav{
 
 .anchor a{
     text-decoration: none;
-    color: #C9DABF;
+    color: white;
     font-weight: 400;
 }
 .anchor i{
@@ -138,7 +138,7 @@ nav{
     height: 500px;
     margin-top: 2%;
     margin: auto;
-    background-color: red;
+    background-color:#C9DABF;
 }
 
 @media(max-width:1000px){
@@ -173,7 +173,8 @@ nav{
         height: 100%;
         flex-direction: column;
         position: absolute;
-        background-color: red;
+        background-color:#C9DABF;
+        color: white;
         right: -200px;
         top: 0;
         align-items: center;
@@ -182,6 +183,7 @@ nav{
         padding-top: 15%;
         transition: ease-in-out 0.5s;
     }
+
     .anchor i{
         display: block;
         font-size: 25px;
