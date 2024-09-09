@@ -45,6 +45,9 @@ nav{
     color: white;
     font-size: clamp(20px,2.5vw,30px);
 }
+.name i{
+    display: none;
+}
 .anchor{
     width: 50%;
     height: 100%;
@@ -68,6 +71,7 @@ nav{
     padding-right: 10px;
     font-size: 20px;
     color: white;
+    display: none;
 
 }
 .anchor a:hover{
@@ -86,12 +90,17 @@ nav{
     display: flex;
     padding-top:6%;
     justify-content: center;
+    margin-bottom: 1%;
 }
 .photo .img{
     width: 270px;
     height: 350px;
     background-color: black;
     border-radius: 20px;
+    overflow: hidden;
+}
+.img img{
+    object-fit: cover;
 }
 .info{
     width: 50%;
@@ -131,11 +140,60 @@ nav{
     margin: auto;
     background-color: red;
 }
-/* @media(max-width:1000px){
+
+@media(max-width:1000px){
     .home{
+        height: auto;
+        position: relative;
+    }
+    .details{
+        flex-direction: column;
         
     }
-} */
+    .photo{
+        width: 100%;
+    }
+    .info{
+        width: 100%;
+        padding: 5%;
+    }
+    .name{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .name i{
+        display: block;
+        margin-right:20px;
+        font-size: 25px;
+        color: white;
+    }
+    .anchor{
+        /* display: none; */
+        width: 200px;
+        height: 100%;
+        flex-direction: column;
+        position: absolute;
+        background-color: red;
+        right: -200px;
+        top: 0;
+        align-items: center;
+        justify-content: start;
+        row-gap: 25px;
+        padding-top: 15%;
+        transition: ease-in-out 0.5s;
+    }
+    .anchor i{
+        display: block;
+        font-size: 25px;
+    }
+
+}
+@media(max-width:450px){
+    .anchor{
+        width: 150px;
+    }
+    
+}
 
 
 
