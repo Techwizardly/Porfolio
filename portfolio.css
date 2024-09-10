@@ -134,11 +134,102 @@ nav{
     border: 1px solid black;
 }
 .about{
-    width: 85%;
-    height: 500px;
+    width: 95%;
+    height: 400px;
     margin-top: 2%;
     margin: auto;
+    padding: 1%;
     background-color:#C9DABF;
+    border-radius: 10px;
+    color: white;
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "article main"
+        "article main"
+        "footer footer"
+    ;
+    grid-template-rows: 50px 1fr 3fr;
+    grid-template-columns: 4fr 2fr;
+
+}
+.about header{
+    
+    grid-area: header;
+}
+.about article{
+    
+    grid-area: article;
+}
+.about main{
+  
+    grid-area: main;
+    display: grid;
+    grid-template-areas: 
+    "html html html"
+    "java java java"
+    "javascript javascript javascript"
+    "sql sql sql"
+    ;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    
+}
+.about footer{
+  
+    grid-area: footer;
+    display: grid;
+    grid-auto-flow:column;
+    justify-content: space-around;
+}
+.html{
+    display: grid;
+    justify-content: space-between;
+    align-items: start;
+    grid-area: html;
+    grid-auto-flow: column;
+    padding-top: 1%;
+    position: relative;
+}
+
+.range{
+    width: 100%;
+    height: 10px;
+    background-color: white;
+    position: absolute;
+    top: 35%;
+    border-radius: 10px;
+}
+.range-flow{
+    width: 70%;
+    height: 100%;
+    background-color: blue;
+}
+.java{
+    grid-area: java;
+   
+    position: relative;
+    display: grid;
+    justify-content: space-between;
+    align-items: start;
+    grid-auto-flow: column;
+}
+.javascript{
+    grid-area: javascript;
+   
+    position: relative;
+    display: grid;
+    justify-content: space-between;
+    align-items: start;
+    grid-auto-flow: column;
+}
+.sql{
+    grid-area: sql;
+    
+    position: relative;
+    display: grid;
+    justify-content: space-between;
+    align-items: start;
+    grid-auto-flow: column;
 }
 
 @media(max-width:1000px){
@@ -187,6 +278,20 @@ nav{
     .anchor i{
         display: block;
         font-size: 25px;
+    }
+    .about{
+        height: 550px;
+        grid-template-areas: 
+        "header header"
+        "article article"
+        "main main"
+        "footer footer"
+    ;
+    grid-template-rows: 50px 2fr 3.5fr 1fr;
+    /* grid-template-columns: 1fr 2fr; */
+    }
+    .range{
+        top:60%;
     }
 
 }
