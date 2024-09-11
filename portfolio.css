@@ -6,7 +6,7 @@
     font-family: 'poppins',sans-serif;
 }
 body{
-    background-color: #5F6F65;
+    background-color: #FFFBE6;
     width: 100%;
     height: 100%;
 }
@@ -19,17 +19,17 @@ body{
 .home{
     width: 95%;
     height: 550px;
-    background-color: #FFFBE6;
     margin: auto;
     border-radius: 10px;
     margin-top: 3%;
     overflow: hidden;
     margin-bottom: 3%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 nav{
     width: 100%;
     height: 70px;
-    background-color: #9CA986;
     display: flex;
 }
 .name{
@@ -42,7 +42,7 @@ nav{
     padding-left: 5%;
 }
 .name h1{
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: clamp(20px,2.5vw,30px);
 }
 .name i{
@@ -61,7 +61,7 @@ nav{
 
 .anchor a{
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: 400;
 }
 .anchor i{
@@ -70,7 +70,7 @@ nav{
     right: 0;
     padding-right: 10px;
     font-size: 20px;
-    color: white;
+    color: rgb(0, 0, 0);
     display: none;
 
 }
@@ -95,7 +95,6 @@ nav{
 .photo .img{
     width: 270px;
     height: 350px;
-    background-color: black;
     border-radius: 20px;
     overflow: hidden;
 }
@@ -121,7 +120,7 @@ nav{
 .info button{
     width: 150px;
     height: 40px;
-    background-color: black;
+    background-color: orange;
     color: white;
     border-radius: 20px;
     outline:none;
@@ -165,13 +164,13 @@ nav{
   
     grid-area: main;
     display: grid;
-    grid-template-areas: 
+    /* grid-template-areas: 
     "html html html"
-    "java java java"
-    "javascript javascript javascript"
-    "sql sql sql"
+    "css css css"
+    "bootstrap bootstrap bootstrap"
+    "JAVASCRIPT JAVASCRIPT JAVASCRIPT "
     ;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr; */
     
 }
 .about footer{
@@ -181,37 +180,45 @@ nav{
     grid-auto-flow:column;
     justify-content: space-around;
 }
-.html{
-    display: grid;
-    justify-content: space-between;
-    align-items: start;
-    grid-area: html;
-    grid-auto-flow: column;
-    padding-top: 1%;
-    position: relative;
-}
+
 
 .range{
     width: 100%;
     height: 10px;
     background-color: white;
     position: absolute;
-    top: 35%;
+    top: 45%;
     border-radius: 10px;
+    overflow: hidden;
 }
 .range-flow{
     width: 70%;
     height: 100%;
     background-color: blue;
 }
-.java{
-    grid-area: java;
+.html{
+    display: grid;
+    justify-content: space-between;
+    align-items: start;
+    grid-area: html;
+    grid-auto-flow: column;
+    /* padding-top: 1%; */
+    position: relative;
+}
+.html .range-flow{
+    width: 96%;
+}
+.bootstrap{
+    grid-area: bootstrap;
    
     position: relative;
     display: grid;
     justify-content: space-between;
     align-items: start;
     grid-auto-flow: column;
+}
+.bootstrap .range-flow{
+    width: 80%;
 }
 .javascript{
     grid-area: javascript;
@@ -222,6 +229,19 @@ nav{
     align-items: start;
     grid-auto-flow: column;
 }
+
+.react{
+    grid-area: react;
+    
+    position: relative;
+    display: grid;
+    justify-content: space-between;
+    align-items: start;
+    grid-auto-flow: column;
+}
+.react .range-flow{
+    width: 75%;
+}
 .sql{
     grid-area: sql;
     
@@ -231,7 +251,180 @@ nav{
     align-items: start;
     grid-auto-flow: column;
 }
+.sql .range-flow{
+    width: 95%;
+}
+.java{
+    grid-area: java;
+    
+    position: relative;
+    display: grid;
+    justify-content: space-between;
+    align-items: start;
+    grid-auto-flow: column;
+}
+.java .range-flow{
+    width: 90%;
+}
+.springboot{
+    grid-area: springboot;
+    
+    position: relative;
+    display: grid;
+    justify-content: space-between;
+    align-items: start;
+    grid-auto-flow: column;
+}
+.springboot .range-flow{
+    width: 95%;
+}
+.dsa{
+    grid-area: dsa;
+    
+    position: relative;
+    display: grid;
+    justify-content: space-between;
+    align-items: start;
+    grid-auto-flow: column;
+}
+.dsa .range-flow{
+    width: 60%;
+}
+.skills{
+    width: 95%;
+    height: 450px;
+    margin: auto;
+    padding: 1%;
+    background-color:#C9DABF;
+    border-radius: 10px;
+    color: white;
+    margin-top: 3%;
+    display: grid;
+    grid-template-areas:
+    "header header"
+    "aside main"
+    "aside main"
+    ;
+    grid-template-rows: 50px 1fr;
+    grid-template-columns: 1fr 1fr;
+    
+}
+.skills f{
+    grid-area: f;
+}
+.skills b{
+    grid-area: b;
+}
+.skills header{
+    grid-area: header;
+    background-color: aqua;
+    border: 1px solid red;
 
+}
+.skills aside{
+    grid-area: aside;
+    background-color: aqua;
+    border: 1px solid red;
+
+    display: grid;
+    grid-template-areas:
+    "f f f" 
+    "html html html"
+    "bootstrap bootstrap bootstrap"
+    "javascript javascript javascript"
+    "react react react"
+    ;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
+    padding: 5%;
+}
+.skills main{
+    grid-area: main;
+    display: grid;
+    grid-template-areas: 
+    "b b b"
+    "java java java"
+    "springboot springboot springboot"
+    "sql sql sql"
+    "dsa dsa dsa"
+    ;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
+    background-color: aqua;
+    border: 1px solid red;
+    padding: 5%;
+
+}
+.project{
+    width: 95%;
+    height: 500px;
+    margin: auto;
+    padding: 1%;
+    background-color:#C9DABF;
+    border-radius: 10px;
+    color: white;
+    margin-top: 3%;
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "article article article"
+        "pro_1 pro_2 pro_3"
+       
+    ;
+    grid-template-rows: 50px 0.3fr 1fr;
+    grid-template-columns: 3fr 3fr 3fr;
+}
+.project header{
+    grid-area: header;
+    background-color: black;
+    border: 1px solid blue;
+}
+.project article{
+    grid-area: article;
+    background-color: black;
+    border: 1px solid blue;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+.project .pro_1{
+    grid-area: pro_1;
+    background-color: black;
+    border: 1px solid blue;
+    padding:3% ;
+    
+}
+.pro_1 p{
+    font-size: 13px;
+}
+.pro_1 a{
+
+    color: white;
+} 
+.project .pro_2{
+    grid-area: pro_2;
+    background-color: black;
+    border: 1px solid blue;
+    padding:3% ;
+}
+.pro_2 p{
+    font-size: 13px;
+}
+.pro_2 a{
+
+    color: white;
+} 
+.project .pro_3{
+    grid-area: pro_3;
+    background-color: black;
+    border: 1px solid blue;
+    padding:3% ;
+}
+.pro_3 p{
+    font-size: 13px;
+}
+.pro_3 a{
+
+    color: white;
+} 
 @media(max-width:1000px){
     .home{
         height: auto;
@@ -295,11 +488,43 @@ nav{
     }
 
 }
+@media(max-width:700px){
+    .project{
+     height: auto;
+    }
+}
 @media(max-width:450px){
     .anchor{
         width: 150px;
     }
+    .skills{
+        height: auto;
+        grid-template-areas:
+        "header header"
+        "aside aside"
+        "main main"
+        ;
+        grid-template-rows: 50px 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+    .skills aside{
+        row-gap: 10px;
+    }
+    .skills main{
+        row-gap: 10px;
+    }
+    .project{
+        grid-template-areas:
+        "header header header"
+        "article article article"
+        "pro_1 pro_1 pro_1"
+        "pro_2 pro_2 pro_2"
+        "pro_3 pro_3 pro_3"
+       
+    ;
+    grid-template-rows: 50px 0.3fr 1fr 1fr 1fr;
     
+    }
 }
 
 
